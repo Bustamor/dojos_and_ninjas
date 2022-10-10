@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <title>Add a Ninja</title>
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">MAKES AND MODELS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/makes">All Makes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/makes/new">Add a Make</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/models">All Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/models/new">Add a Model</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <main class="container">
+        <h1>New Ninja</h1>
+        <div class="row">
+            <div class="col">
+                <form class="form" action="/ninjas" method="post">
+                    <select name="dojo_id" id="">
+                        {% for dojo in dojos_for_html %}
+                        <option value="{{ dojo.id }}">{{dojo.name}}</option>
+                        {%endfor%}
+
+                    </select>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">First Name:</label>
+                        <input type="text" name="first_name" id="name" class="form-control">
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Last Name:</label>
+                        <input type="text" name="last_name" id="name" class="form-control">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Age:</label>
+                        <input type="text" name="age" id="name" class="form-control">
+
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <input type="submit" value="submit" class="btn btn-primary">
+                    </div>
+                </form>
+                <a href="/">HOME</a>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
